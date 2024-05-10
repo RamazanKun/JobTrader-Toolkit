@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #242424;
+  color: white;
+  font-family: 'poppins';
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+
+  div {
+    display: flex;
+    gap: 20px;
+
+    a {
+      font-size: 19px;
+      color: rgb(230, 68, 165);
+      text-decoration: none;
+    }
+
+    .active {
+      text-shadow: 0 0 20px pink;
+    }
+  }
+}
+
+.job-count {
+  margin-bottom: 50px;
+}
+
+// İş Listesi
+.list-page {
+  padding: 40px;
+}
+
+.list-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+}
+// İş Kardı
+.card {
+  background: gray;
+  border-radius: 10px;
+  padding: 20px;
+
+  .head {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .letter {
+      height: 60px;
+      width: 60px;
+      background: purple;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      font-size: 30px;
+    }
+    .info {
+      font-size: 20px;
+    }
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+
+    .field {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 30px;
+      }
+    }
+
+    .status {
+      span {
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      .interview {
+        background: green;
+      }
+      .rejected {
+        background: red;
+      }
+      .pending {
+        background: rgb(197, 197, 0);
+      }
+      .default {
+        background: gray;
+      }
+    }
+  }
+}
+
+// Ekleme Sayfası
+
+.add-sec {
+  box-shadow: 0 22px 70px 4px rgba(128, 0, 128, 0.735);
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 25px;
+}
+
+form {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div input,
+  div select {
+    padding: 10px 15px;
+    margin-top: 5px;
+    border-radius: 4px;
+  }
+
+  div:last-child {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+  button {
+    padding: 10px 40px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms;
+
+    &:hover {
+      scale: 0.96;
+      box-shadow: 0 0 30px rgba(128, 0, 128, 0.798);
+    }
+  }
+}
+
+.filter-sec {
+  @extend .add-sec;
+  max-width: 1000px;
+  margin-top: 10px;
+  form {
+    margin-top: 20px;
+  }
+  .button-area {
+    align-items: start;
+  }
+}
