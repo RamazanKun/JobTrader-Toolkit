@@ -3,7 +3,7 @@
 
 
 <h2>Used Technologies / Kullanılan Teknolojiler</h2>
-<h4>React(Javascript)-Redux-Toolkit Thunk-Html-SCSS</h4>
+<h4>React(Javascript)-Redux-Toolkit-Html-SCSS</h4>
 
 <h2>Screenshot / Ekran Görüntüsü:</h2>
 
