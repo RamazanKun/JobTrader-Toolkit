@@ -30,15 +30,14 @@ const jobSlice = createSlice({
     },
 
     filterBySearch: (state, action) => {
-      // arama termini küçük harfe çevirme
+     
       const query = action.payload.toLowerCase();
 
-      // arama termiyle eşleşen bütün işleri filtrele
+     
       const filter = state.mainJobs.filter((job) =>
         job.company.toLowerCase().includes(query)
       );
 
-      // state'i güncelleme
       state.jobs = filter;
     },
 

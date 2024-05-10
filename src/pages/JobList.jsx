@@ -26,10 +26,10 @@ const JobList = () => {
       </h3>
 
       <section className="list-section">
-        {/* Eğerki api'den cevap bekleniyorsa */}
+      
         {!state.initialized && <p>Yükleniyor...</p>}
 
-        {/* Api'den cevap geldiyse ve herhangi bir hata yoksa */}
+        
         {state.initialized && !state.isError ? (
           <>
             {state.jobs.map((job) => (

@@ -19,7 +19,7 @@ const Filter = () => {
   const handleReset = () => {
     dispatch(clearFilters());
 
-    // inputları temizle
+
     inputRef.current.value = '';
     typeRef.current.value = 'Seçiniz';
     statusRef.current.value = 'Seçiniz';

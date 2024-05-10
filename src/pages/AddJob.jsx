@@ -12,21 +12,19 @@ const AddJob = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // formData oluşturma
+
     const form = new FormData(e.target);
-    // formdaki değerlerden bir obje oluşturma
+    
     const newJob = Object.fromEntries(form.entries());
 
-    //  select'ler seçildmi kontrol etme
     if (!newJob.type || !newJob.status) {
       toast.info('Tüm alanları doldurun');
       return;
     }
 
-    // objeye id ekleme
     newJob.id = v4();
 
-    // tarih ekleme
+ 
     newJob.date = new Date().toLocaleDateString();
 
     //! 1.adım > veriyi api'ye ekleme
@@ -36,10 +34,10 @@ const AddJob = () => {
         //! 2.adım > store'u güncelle
         dispatch(addJob(newJob));
 
-        // anasayfaya yönlednir
+ 
         navigate('/');
 
-        // bildirim ver
+   
         toast.success('İş Başarıyla Eklendi');
       })
       .catch(() => toast.error('Beklenmedik bir hata oluştu..'));

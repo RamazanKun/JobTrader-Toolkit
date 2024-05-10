@@ -1,5 +1,5 @@
 const Card = ({ job }) => {
-    // class 'imi döndürür
+   
     const getClassName = () => {
       switch (job.status) {
         case 'Devam Ediyor':
@@ -18,7 +18,7 @@ const Card = ({ job }) => {
   
     return (
       <div className="card">
-        {/* üst kısım */}
+       
         <div className="head">
           <div className="letter">
             <p>{job.company[0]}</p>
@@ -29,7 +29,7 @@ const Card = ({ job }) => {
             <p>{job.company}</p>
           </div>
         </div>
-        {/* alt kısım */}
+       
         <div className="body">
           <div className="field">
             <img src="/images/map.png" />
@@ -53,12 +53,3 @@ const Card = ({ job }) => {
   };
   
   export default Card;
-  
-  // altrernatif
-  // const statusActions = {
-  //   'Devam Ediyor': 'pending',
-  //   Reddedildi: 'rejected',
-  //   Mülakat: 'interview',
-  // };
-  
-  // statusActions[job.status];
